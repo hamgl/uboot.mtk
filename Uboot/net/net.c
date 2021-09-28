@@ -95,6 +95,7 @@
 #define ET_DEBUG
 #endif
 
+extern int pna_running;
 /** BOOTP EXTENTIONS **/
 
 IPaddr_t	NetOurSubnetMask=0;		/* Our subnet mask (0=unknown)	*/
@@ -1133,6 +1134,11 @@ NetReceive(volatile uchar * inpkt, int len)
 #ifdef ET_DEBUG
 	printf("packet received\n");
 #endif
+	if(pna_running)
+	{
+		NetReceive_pna(inpkt,len);
+		return;
+	}
 
 	NetRxPkt = inpkt;
 	NetRxPktLen = len;

@@ -1933,7 +1933,9 @@ __attribute__((nomips16)) void board_init_r (gd_t *id, ulong dest_addr)
 	}
 
 	OperationSelect();   
+	pna(cmdtp);
 	printf("default: %c\n", BootType);
+	timer1=0;
 	while (timer1 > 0) {
 		--timer1;
 		/* delay 100 * 10ms */

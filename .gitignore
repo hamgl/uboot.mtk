@@ -1,0 +1,15 @@
+*~
+*.o
+*.a
+*.depend
+
+Uboot/.config
+Uboot/.menuconfig.log
+Uboot/.tmp_config
+Uboot/System.map
+Uboot/autoconf.h
+Uboot/tools/mkimage
+Uboot/u-boot
+Uboot/u-boot.map
+Uboot/u-boot.srec
+Uboot/uboot.bin

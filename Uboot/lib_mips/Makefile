@@ -37,6 +37,7 @@ endif
 ifeq ($(MT7620_MP), y)
 COBJS	+= ashldi3.o ashrdi3.o lshrdi3.o
 endif
+COBJS	+= pna.o uip.o
 
 OBJS	= $(AOBJS) $(COBJS)
 
